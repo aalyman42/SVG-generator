@@ -48,14 +48,44 @@ inquirer
         function (err) {
           err
             ? console.log("Something went wrong! Let's try again.")
-            : console.log("success!");
+            : console.log("Generated logo.svg");
         }
       );
     } else if (makeShape.type == "Triangle") {
-      fs.writeFile("./examples/logo.svg", ``);
-    } else if (makeShape.type == "Square") {
-      fs.writeFile("./examples/logo.svg", ``);
-    }
+      fs.writeFile(
+        "./examples/logo.svg",
+        `<svg version="1.1"
+      width="300" height="200"
+      xmlns="http://www.w3.org/2000/svg">
 
-    console.log(makeShape);
+     <polygon px= "50" points="50, 200 150, 0 300, 300" fill="${makeShape.fill}" />
+ 
+   <text x="150" y="125" font-size="90" text-anchor="middle" fill="${makeShape.letterColor}">${makeShape.letters}</text>
+ 
+ </svg>`,
+        function (err) {
+          err
+            ? console.log("Something went wrong! Let's try again.")
+            : console.log("Generated logo.svg");
+        }
+      );
+    } else if (makeShape.type == "Square") {
+      fs.writeFile(
+        "./examples/logo.svg",
+        `<svg version="1.1"
+      width="300" height="200"
+      xmlns="http://www.w3.org/2000/svg">
+ 
+   <rect x="50"  width="200" height="200" fill="${makeShape.fill}" />
+
+   <text x="150" y="125" font-size="90" text-anchor="middle" fill="${makeShape.letterColor}">${makeShape.letters}</text>
+ 
+ </svg>`,
+        function (err) {
+          err
+            ? console.log("Something went wrong! Let's try again.")
+            : console.log("Generated logo.svg");
+        }
+      );
+    }
   });
