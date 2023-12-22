@@ -6,6 +6,8 @@ A JS application used to creat a minimal SVG logo for your site or brand. run no
 
 Github repo: https://github.com/aalyman42/SVG-generator
 
+Demo Video: https://drive.google.com/file/d/1K7G3RMPVBn7FGDyf2Lw3bbFy5j6yAlE7/view?usp=sharing
+
 ## Table of Contents
 
 [Installation](#installation)
